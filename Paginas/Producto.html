@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión productos</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link href="Estilos/all.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+    <!-- Estilos para el datatable -->
+    <link href="Estilos/dataTables.min.css" rel="stylesheet" />
+    <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">GESTIÓN DE PRODUCTOS</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="frmRegistroCliente">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="cboTipoProducto">Tipo producto</label>
+                                            <select id="cboTipoProducto" class="form-control select2" style="width: 100%;">
+                                                <option value="0">Seleccione un tipo de producto</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtCodigoProducto">Código</label>
+                                            <input type="text" class="form-control" id="txtCodigoProducto" placeholder="Código producto" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtProducto">Nombre</label>
+                                            <input type="text" class="form-control" id="txtProducto" placeholder="Nombre del producto">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtValorUnitario">Valor Unitario</label>
+                                            <input type="text" class="form-control" id="txtValorUnitario" placeholder="Valor Unitario">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtInventario">Cantidad disponible</label>
+                                            <input type="text" class="form-control" id="txtInventario" placeholder="Cantidad disponible">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="txtDescripcion">Descripción</label>
+                                            <textarea id="txtDescripcion" class="form-control" rows="2" placeholder="Descripción del producto"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button type="button" id="btnInsertar" class="btn-block btn-lg btn-primary">Insertar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary">Consultar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary">Actualizar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" id="btnEliminar" class="btn-block btn-lg btn-primary">Eliminar</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="dvTabla">
+                                    <table id="tblProductos" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Cod_Tipo_Producto</th>
+                                                <th>Tipo_Producto</th>
+                                                <th>Codigo</th>
+                                                <th>Producto</th>
+                                                <th>Descripción</th>
+                                                <th>Cantidad</th>
+                                                <th>Valor_Unitario</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <div id="dvMensaje" class=""></div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="../Comunes/Combos.js"></script>
+    <script src="../Comunes/Grids.js"></script>
+    <script src="Scripts/Producto.js"></script>
+    <!-- /.card -->
+</body>
+</html>

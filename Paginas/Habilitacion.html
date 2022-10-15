@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Habilitacion</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link href="Estilos/all.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">REGISTRO HABILITACION ESTUDIANTES</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="frmRegistroCliente">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtDocumento">Documento</label>
+                                            <input type="text" class="form-control" id="txtDocumento" placeholder="Documento">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtNombre">Nombre completo</label>
+                                            <input type="text" class="form-control" id="txtNombre" placeholder="Nombre">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Asignatura</label>
+                                            <select id="cboAsignatura" class="form-control select2" style="width: 100%;">
+                                                <option selected="selected" value="Lógica">Lógica</option>
+                                                <option value="Programación">Programación</option>
+                                                <option value="Cálculo">Cálculo</option>
+                                                <option value="Diseño software">Diseño software</option>
+                                                <option value="Base datos">Base datos</option>
+                                                <option value="Inglés">Inglés</option>
+                                                <option value="Geometría">Geometría</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtFechaHabilitacion">Fecha habilitación</label>
+                                            <input type="date" class="form-control" id="txtFechaHabilitacion" placeholder="Fecha habilitación">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtNotaTeorica">Nota teórica</label>
+                                            <input type="number" class="form-control" id="txtNotaTeorica" placeholder="Nota teórica">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-txtNotaPractica">
+                                            <label for="txtNotaPractica">Nota práctica</label>
+                                            <input type="number" class="form-control" id="txtNotaPractica" placeholder="Nota práctica">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtNotaCalculada">Nota calculada</label>
+                                            <input type="text" class="form-control" id="txtNotaCalculada" disabled placeholder="Nota calculada">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="txtNotaDefinitiva">Nota definitiva</label>
+                                            <input type="text" class="form-control" id="txtNotaDefinitiva" disabled placeholder="Nota definitiva">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <button type="button" id="btnRegistrar" class="btn-block btn-lg btn-primary">Registrar</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary">Consultar</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary">Actualizar</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" id="btnEliminar" class="btn-block btn-lg btn-primary">Eliminar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <div id="dvMensaje" class=""></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/Habilitacion.js"></script>
+    <script src="Scripts/Producto.js"></script>
+    <!-- /.card -->
+</body>
+</html>

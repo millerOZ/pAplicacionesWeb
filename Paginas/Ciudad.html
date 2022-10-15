@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestión ciudades</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link href="Estilos/all.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="Estilos/adminlte.min.css" rel="stylesheet" />
+    <!-- Estilos para el datatable -->
+    <link href="Estilos/dataTables.min.css" rel="stylesheet" />
+    <link href="Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">GESTIÓN DE CIUDADES</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form id="frmRegistroCliente">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="cboPais">País</label>
+                                            <select id="cboPais" class="form-control select2" style="width: 100%;" onchange="LlenarComboDepartamento(0)">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="cboDepartamento">Departamento</label>
+                                        <select id="cboDepartamento" class="form-control select2" style="width: 100%;">
+                                            <option value="0">Seleccione un departamento</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="txtCodigo">Código</label>
+                                            <input type="text" class="form-control" id="txtCodigo" placeholder="Código de la ciudad">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="txtCiudad">Nombre</label>
+                                            <input type="text" class="form-control" id="txtCiudad" placeholder="Nombre ciudad">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label for="chkActivo">Activo</label>
+                                            <input type="checkbox" class="form-control" id="chkActivo">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <button type="button" id="btnInsertar" class="btn-block btn-lg btn-primary">Insertar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" id="btnConsultar" class="btn-block btn-lg btn-primary">Consultar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" id="btnActualizar" class="btn-block btn-lg btn-primary">Actualizar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" id="btnEliminar" class="btn-block btn-lg btn-primary">Eliminar</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="dvTabla">
+                                    <table id="tblCiudades" class="display" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Cod_Pais</th>
+                                                <th>Pais</th>
+                                                <th>Cod_Departamento</th>
+                                                <th>Departamento</th>
+                                                <th>Codigo_Ciudad</th>
+                                                <th>Ciudad</th>
+                                                <th>Activo</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <div id="dvMensaje" class=""></div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="../Scripts/jquery.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.min.js"></script>
+    <script src="../Comunes/Combos.js"></script>
+    <script src="../Comunes/Grids.js"></script>
+    <script src="Scripts/Ciudad.js"></script>
+    <!-- /.card -->
+</body>
+</html>
